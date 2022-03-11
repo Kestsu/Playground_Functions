@@ -33,6 +33,7 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(numeral) {
+
   let maior = 0;
   let quantidade = 0;
   for (let a = 0; a < numeral.length; a += 1) {
@@ -47,10 +48,34 @@ function highestCount(numeral) {
   }
   return quantidade;
 }
+
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  
+let gato1 = mouse - cat1;
+let gato2 = mouse - cat2;
+
+if (gato1 > gato2){ 
+let pegar = 'cat2';
+} else if (gato1 < gato2) {
+let pegar = 'cat1';
+} else {
+  let pegar = "os gatos trombam e o rato foge";
 }
+return pegar;
+}
+
+// let primeiro = mouse - cat1;
+// let segundo = mouse - cat2;
+
+// if (primeiro > segundo){
+//   let frase = 'cat2'
+// } else if (primeiro < segundo) {
+//   let frase = 'cat1';
+// } else {
+//   let frase = "os gatos trombam e o rato foge"
+// }
+// return frase
 
 // Desafio 8
 function fizzBuzz() {
@@ -82,4 +107,4 @@ module.exports = {
   highestCount,
   splitSentence,
   techList,
-};
+}
