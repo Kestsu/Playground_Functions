@@ -20,10 +20,10 @@ return separado;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(vetor) {
+  let concat = [vetor[vetor.length - 1] ,vetor[0]];
+  return concat;
 }
-
 // Desafio 5
 function footballPoints() {
   // seu código aqui
