@@ -21,7 +21,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(vetor) {
-  let concat = [vetor[vetor.length - 1], vetor[0]];
+  let concat = vetor[vetor.length - 1] + ', ' + vetor[0];
   return concat;
 }
 
@@ -32,10 +32,21 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numeral) {
+  let maior = 0;
+  let quantidade = 0;
+  for (let a = 0; a < numeral.length; a += 1) {
+    if (maior < numeral[a]) {
+      (maior = numeral[a]);
+    }
+  }
+  for (let b = 0; b < numeral.length; b += 1) {
+    if (maior === numeral[b]) {
+      quantidade += 1;
+    }
+  }
+  return quantidade;
 }
-
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
