@@ -1,32 +1,34 @@
 // Desafio 1
 function compareTrue(parametro1, parametro2) {
-  if(parametro1 && parametro2 === true) {
+  if (parametro1 && parametro2 === true) {
     return true;
   } else {
     return false;
   }
-  }
+}
 
 // Desafio 2
 function calcArea(base, height) {
   let area = (base * height) / 2;
-  return area;      
+  return area;
 }
 
 // Desafio 3
 function splitSentence(string) {
-let separado = string.split(" ");
-return separado;
+  let separado = string.split(" ");
+  return separado;
 }
 
 // Desafio 4
 function concatName(vetor) {
-  let concat = [vetor[vetor.length - 1] ,vetor[0]];
+  let concat = [vetor[vetor.length - 1], vetor[0]];
   return concat;
 }
+
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let pontos = (wins * 3) + ties;
+  return pontos;
 }
 
 // Desafio 6
