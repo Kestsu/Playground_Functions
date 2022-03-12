@@ -51,8 +51,22 @@ function highestCount(numeral) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
+  let gato1 = (mouse - cat1) ** 2;
+  let gato2 = (mouse - cat2) ** 2;
 
+  let ganha1 = 'cat1';
+  let ganha2 = 'cat2';
+  let ninguem = 'os gatos trombam e o rato foge';
+
+  if (gato1 > gato2){
+  return ganha2;
+  } else if (gato1 < gato2) {
+  return ganha1;
+  } else {
+  return ninguem;
+  }
 }
+
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
@@ -83,4 +97,4 @@ module.exports = {
   highestCount,
   splitSentence,
   techList,
-}
+};
