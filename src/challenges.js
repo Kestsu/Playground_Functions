@@ -87,11 +87,45 @@ function fizzBuzz(tabela) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(traducao) {
+  
+  let mudado = '';
+  for(let i in traducao){
+    if(traducao[i] === a) {
+      mudado += '1';
+    } else if (traducao[i] === e) {
+      mudado += '2';
+    } else if (traducao[i] === i) {
+      mudado += '3';
+    } else if (traducao[i] === o) {
+      mudado += '4';
+    } else if (traducao[i] === u) {
+      mudado += '5';
+    } else {
+      mudado.push += traducao[i];
+    }
+  }
+  return mudado;
 }
-function decode() {
-  // seu código aqui
+
+function decode(traducao) {
+  let mudado = '';
+  for(let i in traducao){
+    if(traducao[i] === 1) {
+      mudado += 'a';
+    } else if (traducao[i] === 2) {
+      mudado += 'e';
+    } else if (traducao[i] === 3) {
+      mudado += 'i';
+    } else if (traducao[i] === 4) {
+      mudado += 'o';
+    } else if (traducao[i] === 5) {
+      mudado += 'u';
+    } else {
+      mudado += traducao[i];
+    }
+  }
+  return mudado;
 }
 
 // Desafio 10
