@@ -58,12 +58,12 @@ function catAndMouse(mouse, cat1, cat2) {
   let ganha2 = 'cat2';
   let ninguem = 'os gatos trombam e o rato foge';
 
-  if (gato1 > gato2){
-  return ganha2;
+  if (gato1 > gato2) {
+    return ganha2;
   } else if (gato1 < gato2) {
-  return ganha1;
+    return ganha1;
   } else {
-  return ninguem;
+    return ninguem;
   }
 }
 
@@ -72,12 +72,12 @@ function fizzBuzz(tabela) {
 
   let palavras = [];
 
-  for(let i = 0; i < tabela.length; i += 1){
+  for (let i = 0; i < tabela.length; i += 1) {
     if (tabela[i] % 3 === 0 && tabela[i] % 5 === 0) {
       palavras.push("fizzBuzz")
-    } else if (tabela[i] % 5 === 0){
+    } else if (tabela[i] % 5 === 0) {
       palavras.push("buzz")
-    } else if (tabela[i] % 3 === 0){
+    } else if (tabela[i] % 3 === 0) {
       palavras.push("fizz")
     } else {
       palavras.push("bug!")
@@ -88,38 +88,38 @@ function fizzBuzz(tabela) {
 
 // Desafio 9
 function encode(traducao) {
-  
   let mudado = '';
-  for(let i in traducao){
-    if(traducao[i] === a) {
+  for (let i of traducao) {
+    if (i === 'a') {
       mudado += '1';
-    } else if (traducao[i] === e) {
+    } else if (i === 'e') {
       mudado += '2';
-    } else if (traducao[i] === i) {
+    } else if (i === 'i') {
       mudado += '3';
-    } else if (traducao[i] === o) {
+    } else if (i === 'o') {
       mudado += '4';
-    } else if (traducao[i] === u) {
+    } else if (i === 'u') {
       mudado += '5';
     } else {
-      mudado.push += traducao[i];
+      mudado += i;
     }
   }
   return mudado;
 }
+console.log(encode('hello'));
 
 function decode(traducao) {
   let mudado = '';
-  for(let i in traducao){
-    if(traducao[i] === 1) {
+  for (let i = 0; i < traducao.length; i += 1) {
+    if (traducao[i] === '1') {
       mudado += 'a';
-    } else if (traducao[i] === 2) {
+    } else if (traducao[i] === '2') {
       mudado += 'e';
-    } else if (traducao[i] === 3) {
+    } else if (traducao[i] === '3') {
       mudado += 'i';
-    } else if (traducao[i] === 4) {
+    } else if (traducao[i] === '4') {
       mudado += 'o';
-    } else if (traducao[i] === 5) {
+    } else if (traducao[i] === '5') {
       mudado += 'u';
     } else {
       mudado += traducao[i];
@@ -127,12 +127,23 @@ function decode(traducao) {
   }
   return mudado;
 }
+console.log(decode('h2ll5'));
 
 // Desafio 10
-function techList() {
-  // seu código aqui
-}
+function techList(ultimo, nome) {
+  ultimo.sort();
+  let ordenada = [];
+  let final;
 
+  if (ultimo === []) {
+    return 'Vazio!';
+  } else {
+    for (let i in ultimo) {
+      ordenada.push({ tech: ultimo[i], name: nome });
+      return ordenada;
+    }
+  }
+}
 module.exports = {
   calcArea,
   catAndMouse,
@@ -145,4 +156,4 @@ module.exports = {
   highestCount,
   splitSentence,
   techList,
-};
+}
