@@ -106,7 +106,6 @@ function encode(traducao) {
   }
   return mudado;
 }
-console.log(encode('hello'));
 
 function decode(traducao) {
   let mudado = '';
@@ -127,7 +126,6 @@ function decode(traducao) {
   }
   return mudado;
 }
-console.log(decode('h2ll5'));
 
 // Desafio 10
 function techList(ultimo, nome) {
@@ -135,7 +133,7 @@ function techList(ultimo, nome) {
   let ordenada = [];
   let final;
 
-  if (ultimo === []) {
+  if () {
     return 'Vazio!';
   } else {
     for (let i in ultimo) {
