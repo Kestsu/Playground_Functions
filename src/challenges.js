@@ -129,19 +129,27 @@ function decode(traducao) {
 
 // Desafio 10
 function techList(ultimo, nome) {
-  ultimo.sort();
+  let trabalho = ultimo.sort();
   let ordenada = [];
-  let final;
 
-  if () {
+  if (ultimo.length === 0) {
     return 'Vazio!';
   } else {
-    for (let i in ultimo) {
-      ordenada.push({ tech: ultimo[i], name: nome });
-      return ordenada;
+    for (let i of trabalho) {
+      ordenada.push({ tech: i, name: nome });
     }
+    return ordenada;
   }
 }
+//   if (ultimo.length != 0) {
+//     for (let i = 0; i < ultimo.length; i += 1) {
+//       ordenada.push({ tech: ultimo[i], name: nome });
+//       return ordenada;
+//     } else {
+//       return 'Vazio!';
+//     }
+//   }
+// }
 module.exports = {
   calcArea,
   catAndMouse,
